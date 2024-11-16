@@ -1,0 +1,22 @@
+import datetime
+day = int (input ("day: "))
+month = int(input("month: "))
+year = int(input("year: "))
+days_in_mounth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+res = 0
+if month == 2: 
+    if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0: 
+        days_in_mounth[1] = days_in_mounth[1] + 1 
+if day > 15: 
+    res = days_in_mounth[month-1] - day + 15 
+else:
+    res = 15-day 
+print(res) 
+datel = datetime.date(year, month, day)
+print(datel) 
+
+a = ["пн", "вт", "ср"] 
+
+print(a[2]) 
+
+print(datel.weekday()) 
